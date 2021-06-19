@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title">{{post['title']}}</h2>
+
+        <div class="row g-0  flex-md-row mb-4  h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <p class="card-text mb-auto">{{post['post']}}</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title><image x="0" y="0" width="200" height="165" xlink:href="/static/img/logo.jpg" /><text x="50%" y="60%" fill="#eceeef" dy=".3em">Thumbnail</text>
+          </svg>
+
+        </div>
+      </div>
+
+
+
+
+      </article>
+
+{% endblock %}
