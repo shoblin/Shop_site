@@ -3,15 +3,12 @@
 
 {% block content %}
 
-      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-
-      </h3>
-
       <article class="blog-post">
-        <h2 class="blog-post-title">{{title}}</h2>
+      {% for category in categories %}
+      <h3 class=" py-2 mb-4 fst-italic border-bottom">{{category['name']}}</h3>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
         {% for post in posts %}
+         {% if category['id'] == post['id_categ'] %}
         <div class="col">
           <div class="card shadow-sm">
             <svg class="bd-placeholder-img card-img-top" width="95%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: {{ post['image'] }}" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -29,18 +26,21 @@
             </div>
           </div>
         </div>
-        {% endfor %}
+        {% endif %}
+      {% endfor %}
+            </div>
+      {% endfor %}
 
 
 
-        </div>
+
 
       </article>
 
 {% endblock %}
 
 {% block contacts %}
-  <h4 class="fst-italic">Контакты:</h4>
+  <h3 class="fst-italic">Контакты:</h3>
   <ol class="list-unstyled mb-0">
     <li>
         <a href="https://www.facebook.com/mels28" class="text-decoration-none" style="color: #212529">
